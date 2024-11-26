@@ -1,0 +1,12 @@
+.idea/
+.idea/*
+.idea/**
+
+AtlyssCharacterFreedom/bin/
+AtlyssCharacterFreedom/obj/
+AtlyssCharacterFreedom/bin/*
+AtlyssCharacterFreedom/obj/*
+AtlyssCharacterFreedom/bin/**
+AtlyssCharacterFreedom/obj/**
+
+AtlyssCharacterFreedom.sln.DotSettings.user
