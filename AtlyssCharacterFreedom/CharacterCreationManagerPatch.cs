@@ -13,6 +13,7 @@ namespace AtlyssCharacterFreedom
         
         private static void Prefix(CharacterCreationManager __instance)
         {
+            // Just realized this function probably runs a lot, this is probably not performant.
             PlayerRaceModel? model = __instance.GetType().GetField("_currentRaceModel", BindingFlags.Instance | BindingFlags.NonPublic)!.GetValue(__instance) as PlayerRaceModel;
             model!._scriptablePlayerRace._raceDisplayParams = templateParamsGroup;
         }
