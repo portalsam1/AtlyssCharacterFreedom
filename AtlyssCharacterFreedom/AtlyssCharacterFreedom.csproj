@@ -7,30 +7,33 @@
         <Authors>portalsam</Authors>
         <PackageProjectUrl>https://github.com/portalsam1/AtlyssCharacterFreedom</PackageProjectUrl>
         <LangVersion>8</LangVersion>
-        <TargetFramework>net472</TargetFramework>
+        <TargetFramework>netstandard2.1</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>
       <Reference Include="0Harmony">
-        <HintPath>E:\SteamLibrary\steamapps\common\ATLYSS\BepInEx\core\0Harmony.dll</HintPath>
+        <HintPath>D:\SteamLibrary\steamapps\common\ATLYSS\BepInEx\core\0Harmony.dll</HintPath>
       </Reference>
       <Reference Include="Assembly-CSharp">
-        <HintPath>E:\SteamLibrary\steamapps\common\ATLYSS\ATLYSS_Data\Managed\Assembly-CSharp.dll</HintPath>
+        <HintPath>D:\SteamLibrary\steamapps\common\ATLYSS\ATLYSS_Data\Managed\Assembly-CSharp.dll</HintPath>
       </Reference>
       <Reference Include="BepInEx">
-        <HintPath>E:\SteamLibrary\steamapps\common\ATLYSS\BepInEx\core\BepInEx.dll</HintPath>
+        <HintPath>D:\SteamLibrary\steamapps\common\ATLYSS\BepInEx\core\BepInEx.dll</HintPath>
       </Reference>
       <Reference Include="Mirror">
-        <HintPath>E:\SteamLibrary\steamapps\common\ATLYSS\ATLYSS_Data\Managed\Mirror.dll</HintPath>
+        <HintPath>D:\SteamLibrary\steamapps\common\ATLYSS\ATLYSS_Data\Managed\Mirror.dll</HintPath>
+      </Reference>
+      <Reference Include="mscorlib">
+        <HintPath>D:\SteamLibrary\steamapps\common\ATLYSS\ATLYSS_Data\Managed\mscorlib.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine">
-        <HintPath>E:\SteamLibrary\steamapps\common\ATLYSS\ATLYSS_Data\Managed\UnityEngine.dll</HintPath>
+        <HintPath>D:\SteamLibrary\steamapps\common\ATLYSS\ATLYSS_Data\Managed\UnityEngine.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.CoreModule">
-        <HintPath>E:\SteamLibrary\steamapps\common\ATLYSS\ATLYSS_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+        <HintPath>D:\SteamLibrary\steamapps\common\ATLYSS\ATLYSS_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine.UI">
-        <HintPath>E:\SteamLibrary\steamapps\common\ATLYSS\ATLYSS_Data\Managed\UnityEngine.UI.dll</HintPath>
+        <HintPath>D:\SteamLibrary\steamapps\common\ATLYSS\ATLYSS_Data\Managed\UnityEngine.UI.dll</HintPath>
       </Reference>
     </ItemGroup>
 

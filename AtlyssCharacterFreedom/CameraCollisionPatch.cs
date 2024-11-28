@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using System.Reflection;
 using System.Reflection.Emit;
 using HarmonyLib;
 using UnityEngine;
@@ -9,6 +10,7 @@ namespace AtlyssCharacterFreedom
 {
     public static class CameraCollisionPatch
     {
+        
         [HarmonyPatch(typeof(CameraCollision), "LateUpdate")] [SuppressMessage("ReSharper", "InconsistentNaming")] [SuppressMessage("ReSharper", "UnusedMember.Local")]
         public static class CameraCollisionTranspilerPatch
         {
@@ -30,23 +32,28 @@ namespace AtlyssCharacterFreedom
             
                 // I tried to remove the minimum check but no matter what I did it would cause some Label error, someone smarter needs to take a look at this and propose something that works.
                 code.RemoveRange(maxIndex - 2, 7);
+                
+                MethodInfo calculateCameraClampMethod = AccessTools.Method(typeof(CameraCollisionPatch), nameof(CalculateCameraClamp), new[] { typeof(CameraCollision) });
+                
+                List<CodeInstruction> newInstructions = new List<CodeInstruction>
+                {
+                   // CameraCollisionPatch.CalculateCameraClamp(this);
+                   new CodeInstruction(OpCodes.Ldarg_0),
+                   new CodeInstruction(OpCodes.Call, calculateCameraClampMethod)
+                };
+                
+                code.InsertRange(maxIndex - 2, newInstructions);
 
                 return code.AsEnumerable();
             }
         }
-        [HarmonyPatch(typeof(CameraCollision), "Handle_DistanceControl")] [SuppressMessage("ReSharper", "InconsistentNaming")] [SuppressMessage("ReSharper", "UnusedMember.Local")]
-        public static class CameraCollisionDistanceControlPatch
-        {
-            private static void Postfix(CameraCollision __instance)
-            {
-                if (Player._mainPlayer == null) return;
-            
-                float calculatedMax = Player._mainPlayer._pVisual._playerAppearanceStruct._heightWeight.Remap(1, 100, 60, 1500);
-                if(__instance.maxDistance > calculatedMax)
-                    __instance.maxDistance = calculatedMax;
-            
-                CharacterFreedom.Logger.LogInfo($"{calculatedMax} {__instance.maxDistance}");
-            }
+        
+        public static void CalculateCameraClamp(CameraCollision instance)
+        { 
+            float calculatedMax = Player._mainPlayer._pVisual._playerAppearanceStruct._heightWeight.Remap(1, 100, 60, 1500);
+            if(instance.maxDistance > calculatedMax)
+                instance.maxDistance = calculatedMax;
         }
+        
     }
 }
