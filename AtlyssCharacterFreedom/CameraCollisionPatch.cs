@@ -37,7 +37,7 @@ namespace AtlyssCharacterFreedom
                 
                 List<CodeInstruction> newInstructions = new List<CodeInstruction>
                 {
-                   // CameraCollisionPatch.CalculateCameraClamp(this);
+                   // Instructions for: CameraCollisionPatch.CalculateCameraClamp(this);
                    new CodeInstruction(OpCodes.Ldarg_0),
                    new CodeInstruction(OpCodes.Call, calculateCameraClampMethod)
                 };
