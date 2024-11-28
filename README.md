@@ -3,6 +3,9 @@
 This mod disables clamping for character body values, it also adjusts the default max values for some of the sliders.<br />
 Currently other people also need to have the mod for them to be able to see changes larger than vanilla.<br />
 
+## Where is the .DLL?
+The [Releases](https://github.com/portalsam1/AtlyssCharacterFreedom/releases) tab, it's on the right with the green text that says "Latest".
+
 ## Install
 [Install BepInEx](https://docs.bepinex.dev/articles/user_guide/installation/index.html) and place the .dll file into the BepInEx/plugins folder. You may need to create this folder if it does not already exist.
 <br/><br/>
