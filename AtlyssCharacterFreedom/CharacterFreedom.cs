@@ -9,7 +9,7 @@ namespace AtlyssCharacterFreedom
 {
     
     [SuppressMessage("ReSharper", "UnusedMember.Local")] [SuppressMessage("ReSharper", "UnusedType.Global")]
-    [BepInPlugin("net.portalsam.AtlyssCharacterFreedom", "CharacterFreedom", "1.0.0.0")]
+    [BepInPlugin("net.portalsam.AtlyssCharacterFreedom", "CharacterFreedom", "1.2.0.0")]
     [BepInProcess("ATLYSS.exe")]
     public class CharacterFreedom : BaseUnityPlugin
     {
