@@ -4,8 +4,7 @@ namespace AtlyssCharacterFreedom
 {
     internal static class Configuration
     {
-
-        // I think if people change these then other people with the mod probably aren't able to see them unless their config is the same / has the number, I don't know if there's any good solution to this.
+        
         public static readonly ConfigEntry<float> ArmMinimumRange = CharacterFreedom.GetConfig().Bind("MinimumValues", "ArmMinimumRange", -5f, "The minimum value that the arm slider will produce in character menus.");
         public static readonly ConfigEntry<float> BellyMinimumRange = CharacterFreedom.GetConfig().Bind("MinimumValues", "BellyMinimumRange", -20f, "The minimum value that the belly slider will produce in character menus.");
         public static readonly ConfigEntry<float> BoobMinimumRange = CharacterFreedom.GetConfig().Bind("MinimumValues", "BoobMinimumRange", -20f, "The minimum value that the boob slider will produce in character menus.");
@@ -27,6 +26,8 @@ namespace AtlyssCharacterFreedom
         public static readonly ConfigEntry<float> WidthMaximumRange = CharacterFreedom.GetConfig().Bind("MaximumValues", "WidthMaximumRange", 1.5f, "The maximum value that the width slider will produce in character menus.");
         public static readonly ConfigEntry<float> HeadModMaximumRange = CharacterFreedom.GetConfig().Bind("MaximumValues", "HeadModMaximumRange", 100f, "The maximum value that the head modification slider will produce in character menus.");
         public static readonly ConfigEntry<float> HeadWidthMaximumRange = CharacterFreedom.GetConfig().Bind("MaximumValues", "HeadWidthMaximumRange", 1.15f, "The maximum value that the head width slider will produce in character menus.");
+
+        public static readonly ConfigEntry<bool> SafetyEnabled = CharacterFreedom.GetConfig().Bind("Safety", "SafetyEnabled", false, "Enables safety settings, clamping other players avatars to the sizes defined in your personal config.");
         
     }
 }

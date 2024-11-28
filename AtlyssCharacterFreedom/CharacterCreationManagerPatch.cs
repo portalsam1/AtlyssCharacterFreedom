@@ -6,7 +6,7 @@ namespace AtlyssCharacterFreedom
 {
     // This class uncaps the sliders in the character creation menu.
     [HarmonyPatch(typeof(CharacterCreationManager), "Handle_CharacterCreationDisplay")] [SuppressMessage("ReSharper", "InconsistentNaming")] [SuppressMessage("ReSharper", "UnusedMember.Local")]
-    internal class CharacterCreationManagerPatch
+    internal static class CharacterCreationManagerPatch
     {
 
         private static readonly CharacterParamsGroup templateParamsGroup = new CharacterParamsGroup();

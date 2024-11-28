@@ -5,7 +5,7 @@ using HarmonyLib;
 namespace AtlyssCharacterFreedom
 {
     [HarmonyPatch(typeof(CharacterParamsGroup), MethodType.Constructor, new Type[] { })] [SuppressMessage("ReSharper", "InconsistentNaming")] [SuppressMessage("ReSharper", "UnusedMember.Local")]
-    internal class CharacterParamsGroupPatch
+    internal static class CharacterParamsGroupPatch
     {
         private static void Postfix(CharacterParamsGroup __instance)
         {

@@ -10,10 +10,12 @@ namespace AtlyssCharacterFreedom
         private static bool Prefix(ScriptablePlayerRace __instance, ref PlayerAppearance_Profile __result, PlayerAppearance_Profile _aP)
         {
             
-            // No clamping at all, might be redundant.
             CharacterParamsGroup patchedParamsGroup = new CharacterParamsGroup();
             __instance._raceDisplayParams = patchedParamsGroup;
-            
+
+            // Do not bypass the clamping if safety is enabled.
+            if (Configuration.SafetyEnabled.Value) return true;
+
             __result = _aP;
             return false;
 

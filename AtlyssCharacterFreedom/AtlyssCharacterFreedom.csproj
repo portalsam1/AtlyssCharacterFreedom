@@ -1,12 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.1</TargetFramework>
         <Nullable>enable</Nullable>
         <Version>1.1.0</Version>
         <Title>AtlyssCharacterFreedom</Title>
         <Authors>portalsam</Authors>
         <PackageProjectUrl>https://github.com/portalsam1/AtlyssCharacterFreedom</PackageProjectUrl>
+        <LangVersion>8</LangVersion>
+        <TargetFramework>net472</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>
@@ -18,6 +19,9 @@
       </Reference>
       <Reference Include="BepInEx">
         <HintPath>E:\SteamLibrary\steamapps\common\ATLYSS\BepInEx\core\BepInEx.dll</HintPath>
+      </Reference>
+      <Reference Include="Mirror">
+        <HintPath>E:\SteamLibrary\steamapps\common\ATLYSS\ATLYSS_Data\Managed\Mirror.dll</HintPath>
       </Reference>
       <Reference Include="UnityEngine">
         <HintPath>E:\SteamLibrary\steamapps\common\ATLYSS\ATLYSS_Data\Managed\UnityEngine.dll</HintPath>
