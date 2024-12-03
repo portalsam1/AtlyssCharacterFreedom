@@ -22,6 +22,7 @@ namespace AtlyssCharacterFreedom
             Instance = this;
             Logger = base.Logger;
             
+            Configuration.BindConfiguration();
             Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly());
             
             Logger.LogInfo("CharacterFreedom has been initialized!");
