@@ -1,4 +1,5 @@
 # AtlyssCharacterFreedom
+[Thunderstore Link](https://thunderstore.io/c/atlyss/p/portalsam/AtlyssCharacterFreedom/)
 
 This mod disables clamping for character body values, it also adjusts the default max values for some of the sliders.<br />
 Currently other people also need to have the mod for them to be able to see changes larger than vanilla.<br />
